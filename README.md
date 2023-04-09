@@ -136,3 +136,84 @@ perintahnya masih sama dengan yang diatas, hanya saja di gantikan menjadi UNIQUE
 ## Tulis semua perintah-perintah SQL percobaan diatas berserta optpitnya!
 
 # Membuat Database
+```
+CREATE DATABASE latihan1;
+```
+
+<img width="960" alt="inay15" src="https://user-images.githubusercontent.com/115867315/230782620-34b7152b-f15f-47cc-b3ce-97f333c43b41.png">
+
+# Membuat Tabel
+```
+CREATE TABLE siswa (nama VARCHAR (100), alamat TEXT);
+```
+
+<img width="960" alt="inay16" src="https://user-images.githubusercontent.com/115867315/230782663-da28f4c3-338a-4e38-932d-272569f76d8b.png">
+
+# Membuat kolom
+```
+ALTER TABLE biodata ADD COLUMN ketengan TEXT AFTER alamat;
+```
+
+<img width="880" alt="inay17" src="https://user-images.githubusercontent.com/115867315/230782748-bd917559-1190-4db9-b63a-0b3475aada82.png">
+
+# Menamabah kolom diawal
+```
+ALTER TABLE siswa ADD COLUMN id INT FIRST;
+```
+
+<img width="930" alt="inay18" src="https://user-images.githubusercontent.com/115867315/230782838-eb3029fa-7f71-4be2-a7ea-d2b5fee498a0.png">
+
+# Mengubah nama kolom
+```ALTER TABLE siswa CHANGE COLUMN keterangan TO kelas;```
+
+Diperintah ini terdapat kesalahan, seharusnya yang benar yaitu ini ``ALTER TABLE siswa CHANGE keterangan kelas TEXT``
+
+<img width="960" alt="inay19" src="https://user-images.githubusercontent.com/115867315/230782951-eae2cd17-6c45-49cb-a94a-cdddcf640260.png">
+
+# Mengubah tipe data
+```
+ALTER TABLE siswa MODIFY COLUMN kelas VARCHAN(10);
+```
+
+<img width="960" alt="inay20" src="https://user-images.githubusercontent.com/115867315/230783006-f0456635-45f8-4e4d-90e3-c33e54843670.png">
+
+# Menghapus kolom
+```
+ALTER TABLE siswa DROP COLUMN kelas;
+```
+
+<img width="960" alt="inay21" src="https://user-images.githubusercontent.com/115867315/230783054-c2cd4b59-da50-4b7d-a84e-13b362fff458.png">
+
+# Menambah PRIMARY KEY
+```
+ALTER TABLE siswa ADD PRIMARY KEY(id);
+```
+
+<img width="960" alt="inay22" src="https://user-images.githubusercontent.com/115867315/230783135-ec4a6a44-753e-4248-91df-0b3129e0b9c8.png">
+
+# Menambah CONSTRAINT
+```
+ALTER TABLE siswa ADD CONSTRAINT pk_sisiwa PRIMARY KEY(id);
+```
+
+<img width="960" alt="inay23" src="https://user-images.githubusercontent.com/115867315/230783185-ef868063-0bda-4653-9d54-8f12b86551ab.png">
+
+# Menghapus PRIMARY KEY
+```
+ALTER TABLE siswa DROP PRIMARY KEY;
+```
+
+<img width="960" alt="inay24" src="https://user-images.githubusercontent.com/115867315/230783245-487fd6d4-05dc-48f1-b0c3-58e52a8aa290.png">
+
+# Menghapus CONSTRAINT
+```
+ALTER TABLE siswa DROP CONSTRAINT pk_siswa;
+```
+
+<img width="960" alt="inay24" src="https://user-images.githubusercontent.com/115867315/230783300-1f1adbed-15f5-440b-8948-884dc99448eb.png">
+
+## Apa Maksud dari int(11)?
+adalah suatu data yang dipakai atau digunakan menggunakan tipe data int atau integer dengan length atau panjang 11 karakter
+
+## Ketika kita melihat struktur tabel dengan perintah desc, ada kolom Null yang berisi Yes dan No. Apa maksdnya?
+Maksud dari kata yes dan no pada kolom null itu adalah untuk menjelaskan bahwa pada record yang no harus di isi sedangkan yes bisa tidak di isi
