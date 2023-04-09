@@ -26,17 +26,16 @@ USE latiahan2
 
 2.Buat sebuah tabel denngan nama biodata (nama,alamt) didalam database latihan1!
 perintah yang digunakan untuk membuat tabel yaitu:
+
 ````
 CREATE TABLE nama_tabel (nama_field1 tipe _data(ukuran), nama_field2 tipe_data(ukuran), ..., nama_fieldn tipe_data(ukuran));
 ```
-
-```
-CREATE TABLE biodata (nama VACHAR (15), alamat TEXT);
-```
+```CREATE TABLE biodata (nama VACHAR (15), alamat TEXT);```
 
 <img width="498" alt="inay 2" src="https://user-images.githubusercontent.com/115867315/230778642-f405f3ee-ae63-4c15-97a7-c3784e495474.png">
 
 <img width="604" alt="inay3" src="https://user-images.githubusercontent.com/115867315/230778674-9d10becd-c70c-4a19-8fc7-cb9b09c6f401.png">
+
 
 3.Tambahkan sebuah kolam keterangan(varchar15) setelah kolom terakhir!
 untuk menambahkan kolam di akhir biasanya mengunakn kata AFTER, contoh:
